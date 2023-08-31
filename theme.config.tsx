@@ -5,7 +5,7 @@ import { inject } from "@vercel/analytics";
 inject();
 
 const config: DocsThemeConfig = {
-  logo: <span>Stargazer</span>,
+  logo: <span>Stargazer Documentation</span>,
   project: {
     link: "https://github.com/StargazerLabs/docs",
   },
@@ -15,6 +15,11 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: "https://github.com/StargazerLabs/docs",
   footer: {
     text: "Stargazer Documentation",
+  },
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s – Stargazer Docs",
+    };
   },
 };
 
